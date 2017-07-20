@@ -1,0 +1,125 @@
+<!-- start new event form -->
+<div class="container">
+	<h1 class="col-sm-offset-2">Create A New Event</h1>
+</div>
+
+<!-- event form -->
+<div class="container">
+
+		<div class="row" id="alert">
+		<div class="alert alert-success alert-dismissible col-sm-offset-2 col-sm-7" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			Event has been created!</div>
+		<div class="col-sm-offset-3"></div>
+		</div>
+
+		<form class="form-horizontal newCreate">
+		<!-- event title -->
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Event Title</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control createForm" id="newEventTitle" ng-model="newEvent.title" placeholder="Give your event a title">
+				</div>
+			</div>
+		<!-- event description -->  
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Description</label>
+				<div class="col-sm-6">
+					<textarea type="text" class="form-control createForm" rows="3" id="newEventDes" ng-model="newEvent.Des" placeholder="Lengthy and overexaggerated description to bring people to the event!"></textarea>
+				</div>
+			</div>
+		<!-- event type --> 
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Website</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control createForm" id="newEventWebsite"  ng-model="newEvent.website" placeholder="Website">
+				</div>
+			</div>
+		<!-- event type --> 
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Type</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control createForm" id="newEventType"  ng-model="newEvent.type" placeholder="Type of Event">
+				</div>
+			</div>
+
+		<!-- event Location -->  
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Location</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventStreet"  ng-model="newEvent.street" placeholder="Street">
+				</div>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventCity"  ng-model="newEvent.city" placeholder="City">
+				</div>
+				<div class="col-sm-1">
+					<input type="text" class="form-control createForm" id="newEventState"  ng-model="newEvent.state" placeholder="State">
+				</div>
+				<div class="col-sm-1">
+					<input type="text" class="form-control createForm" id="newEventZip"  ng-model="newEvent.zip" placeholder="Zip">
+				</div>
+			</div>
+		<!-- start Date + Time -->  
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Start</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventStartDate"  ng-model="newEvent.startDate" placeholder="Start Date">
+				</div>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventStartTime"  ng-model="newEvent.startTime" placeholder="Start Time">
+				</div>
+			</div>
+		<!-- end Date + Time -->
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">End</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventEndDate"  ng-model="newEvent.endDate" placeholder="End Date">
+				</div>
+				<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventEndTime"  ng-model="newEvent.endTime" placeholder="End Time">
+				</div>
+			</div>
+		<!-- age restriction -->
+			<div class="form-group form-inline">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Age Restriction</label>
+					<div class="col-sm-2">
+					<input type="text" class="form-control createForm" id="newEventAgeRes"  ng-model="newEvent.ageRes" placeholder="Yes or No">
+				</div>
+			</div>
+		<!-- admission price -->
+			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Admission Price</label>
+				<div class="col-sm-4 input-group adminAdd">
+					<div class="input-group-addon createForm">$</div>
+						<input type="text" class="form-control createForm" id="newEventAdmission"  ng-model="newEvent.admission" placeholder="Amount">
+					<div class="input-group-addon createForm">.00</div>
+				</div>
+			</div>
+		<!-- photo upload -->
+<!-- 			<div class="form-group">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Photos</label>
+				<div class="col-sm-2">
+					<input type="file" id="uploadImg">
+				</div>
+			</div> -->
+		<!-- fleur -->
+			<div class="form-group form-inline">
+				<label class="col-sm-offset-1 col-sm-2 control-label">Fleur</label>
+					<div class="col-sm-4">
+					<input type="text" class="form-control createForm" id="newEventFleur"  ng-model="newEvent.fleur" placeholder="Estimated # of eventgoers">
+				</div>
+			</div>
+
+		<!-- create event button -->  
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<button type="button" ng-click="createEvent()" class="btn btn-default" id="createEvent">Create Event</button>
+				</div>
+			</div>
+
+		</form>
+
+</div>
+
+
+<!-- / new event form -->
