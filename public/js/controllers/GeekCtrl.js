@@ -1,10 +1,11 @@
-// var URL = 'http://localhost:3000';
+// var URL = 'http://localhost:8080';
 var URL = 'https://fleurish.herokuapp.com';
 
 angular.module('GeekCtrl', []).controller('GeekController', function($scope, $http) {
 
 		$http.get(URL+"/all-event").then(function(response){
 		$scope.events = response.data;
+		console.log("i am here!");
 	});
 
 	// onclick function for create event form

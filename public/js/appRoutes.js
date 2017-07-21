@@ -15,7 +15,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
 		.when('/browse', {
 			templateUrl: 'views/browse.html',
-			controller: 'BrowseController'	
+			controller: 'GeekController'	
 		})
 
 		.when('/about', {

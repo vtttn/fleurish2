@@ -123,3 +123,45 @@
 
 
 <!-- / new event form -->
+
+
+<!-- custom page script -->
+<script type="text/javascript">
+	
+
+// DATE PICKER INDEX
+	$( function() {
+		var dateFormat = "mm/dd/yy",
+			from = $( "#from, #fromBrowse, #newEventStartDate" )
+				.datepicker({
+					defaultDate: null,
+					changeMonth: true,
+					changeYear: true,
+					numberOfMonths: 1
+				})
+				.on( "change", function() {
+					to.datepicker( "option", "minDate", getDate( this ) );
+				}),
+			to = $( "#to, #toBrowse, #newEventEndDate" ).datepicker({
+				defaultDate: null,
+				changeMonth: true,
+				changeYear: true,
+				numberOfMonths: 1
+			})
+			.on( "change", function() {
+				from.datepicker( "option", "maxDate", getDate( this ) );
+			});
+ 
+		function getDate( element ) {
+			var date;
+			try {
+				date = $.datepicker.parseDate( dateFormat, element.value );
+			} catch( error ) {
+				date = null;
+			}
+ 
+			return date;
+		}
+	} );
+	
+</script>
