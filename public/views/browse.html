@@ -2,82 +2,104 @@
 	<div class="container"> <!-- start page container -->
 		<div class="panel-group filterPanelGroup col-lg-offset-1 col-lg-3 col-md-3 col-sm-12" id="accordion" role="tablist" aria-multiselectable="true">
 		<!-- Event Type Filter -->
-		  <div class="filterPanel panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingOne">
-		      <h4 class="panel-title">
-		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-		          Event Type
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-		      <div class="panel-body">
-		        insert filtering for types
-		      </div>
-		    </div>
-		  </div>
+			<div class="filterPanel panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Event Type
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						insert filtering for types
+					</div>
+				</div>
+			</div>
 		<!-- Location Filter -->
-		  <div class="filterPanel panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingTwo">
-		      <h4 class="panel-title">
-		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-		          Location
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-		      <div class="panel-body">
-		        the dropdown of cities 
-		      </div>
-		    </div>
-		  </div>
+			<div class="filterPanel panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Location
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+					<!-- start dropdown -->
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<div class="input-group filterSearch">
+							  <select class="form-control">
+							  	<option placeholder="Location"></option>
+								  <option>New Orleans</option>
+								  <option>Metairie</option>
+								  <option>Gretna</option>
+								  <option>Kenner</option>
+								  <option>Avondale</option>
+								  <option>Belle Chase</option>
+								  <option>Chalmette</option>
+								  <option>Elmwood</option>
+								  <option>Harahan</option>
+								  <option>Harvey</option>
+								  <option>Marrero</option>
+								</select>
+							  <span class="input-group-btn">
+									<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  </span>
+							</div>
+						</div>			
+							<!-- /dropdown button -->
+					</div>
+				</div>
+			</div>
 		<!-- Date Filter -->
-		  <div class="filterPanel panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingThree">
-		      <h4 class="panel-title">
-		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-		          Date
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-		      <div class="panel-body">
-		      <!-- Date Picker Form -->
-		        <div class="col-xs-5 col-md-12 col-lg-12">
+			<div class="filterPanel panel panel-default">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Date
+						</a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					<div class="panel-body">
+					<!-- Date Picker Form -->
+						<div class="col-xs-5 col-md-12 col-lg-12">
 					<div class="input-group formStretch browseFilter">
-					  <input type="text" class="form-control" placeholder="from" id="fromBrowse">
+						<input type="text" class="form-control" placeholder="from" id="fromBrowse">
 					</div>
-				  </div>
-				  <div class="col-xs-5 col-md-12 col-lg-12">
+					</div>
+					<div class="col-xs-5 col-md-12 col-lg-12">
 					<div class="input-group col-xs-6 formStretch browseFilter">
-					  <input type="text" class="form-control" placeholder="To" id="toBrowse">
+						<input type="text" class="form-control" placeholder="To" id="toBrowse">
 					</div>
-				  </div>
-				  <div class="col-xs-2 col-md-12 col-lg-12">
-				  	<div class="form-group">
-				  		<span class="input-group-btn">
+					</div>
+					<div class="col-xs-2 col-md-12 col-lg-12">
+						<div class="form-group">
+							<span class="input-group-btn">
 						<button class="btn btn-default browsefilterbtn" type="button">Go!</button>
-					  	</span>
-				  	</div>
-				  </div>
-		      </div>
-		    </div>
-		  </div>
+							</span>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
 		<!-- Admission Price Filter -->
-		  <div class="filterPanel panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingFour">
-		      <h4 class="panel-title">
-		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-		          Admission Price
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-		      <div class="panel-body">
-		        filter by free or other values
-		      </div>
-		    </div>
-		  </div>
+			<div class="filterPanel panel panel-default">
+				<div class="panel-heading" role="tab" id="headingFour">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							Admission Price
+						</a>
+					</h4>
+				</div>
+				<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+					<div class="panel-body">
+						filter by free or other values
+					</div>
+				</div>
+			</div>
 		</div>
 	
 <!-- / collapse filter -->
