@@ -10,12 +10,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
 		.when('/create', {
 			templateUrl: 'views/create.html',
-			controller: 'NerdController'
+			controller: 'CreateController'
 		})
 
 		.when('/browse', {
 			templateUrl: 'views/browse.html',
-			controller: 'GeekController'	
+			controller: 'BrowseController'	
 		})
 
 		.when('/about', {

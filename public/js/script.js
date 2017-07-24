@@ -42,5 +42,3 @@ var URL = 'https://fleurish.herokuapp.com';
 		});
 
 	});  
-
-
