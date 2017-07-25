@@ -35,9 +35,4 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 
 	};
 
-	$scope.filterBy = function(x){
-		$scope.filtering = x;
-		console.log(x);
-	}
-
 });

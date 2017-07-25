@@ -124,7 +124,7 @@
 
 			<h1>Events</h1>
 
-			<div ng-repeat="event in events | filter:selectedCity | filter:selectedType | filter:selectedAdmission">
+			<div ng-repeat="event in events | filter: {city: selectedCity} | filter:{ type: selectedType } | filter:{ admission: selectedAdmission }">
 			<!-- ng-if="selectedCity" see how to make ng-if true when button is clicked-->
 				
 
