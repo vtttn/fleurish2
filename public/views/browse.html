@@ -44,7 +44,7 @@
 						<div class="col-xs-12 col-md-12 col-lg-12">
 							<div class="input-group filterSearch">
 							<select class="form-control" ng-model="selectedCity" ng-options="city for city in locations">
-								<option value="" disabled selected >Select a City</option>
+								<option value="" selected >Select a City</option>
 							</select>
 					<!-- / city dropdown -->
 					<!-- dropdown button -->
@@ -124,7 +124,7 @@
 
 			<h1>Events</h1>
 
-			<div ng-repeat="event in events">
+			<div ng-repeat="event in events | filter:selectedCity | filter:selectedType | filter:selectedAdmission">
 			<!-- ng-if="selectedCity" see how to make ng-if true when button is clicked-->
 				
 
