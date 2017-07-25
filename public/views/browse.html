@@ -13,7 +13,7 @@
 				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					<div class="panel-body">
 					<!-- start event type dropdown -->
-					<div class="col-xs-12 col-md-12 col-lg-12">
+						<div class="col-xs-12 col-md-12 col-lg-12">
 							<div class="input-group filterSearch">
 							<select class="form-control" ng-model="typeSelect" ng-options="type for type in types">
 								<option value="" disabled selected >Select a type</option>
@@ -48,8 +48,8 @@
 							</select>
 					<!-- / city dropdown -->
 					<!-- dropdown button -->
-							  <span class="input-group-btn" ng-click="filterCitybtn()">
-									<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  <span class="input-group-btn">
+									<button class="btn btn-default filterbtn" type="button" ng-click="filterCitybtn()">Go!</button>
 							  </span>
 							</div>
 						</div>			
@@ -100,7 +100,18 @@
 				</div>
 				<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 					<div class="panel-body">
-						filter by free or other values
+					<!-- start dropdown -->
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<div class="input-group filterSearch">
+							<select class="form-control" ng-model="typeSelect" ng-options="admission for admission in admissions">
+								<option value="" disabled selected >Select admission $</option>
+							</select>
+							  <span class="input-group-btn" ng-click="filterAdmissionbtn()">
+							  		<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  </span>
+							</div>
+						</div>
+							<!-- /dropdown button -->
 					</div>
 				</div>
 			</div>
