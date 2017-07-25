@@ -34,15 +34,15 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 		console.log(selectedAdmission);
 	};
 
-
 	$scope.plusOne = function(index) { 
-  		$scope.events[index].fleurs ++ 1; 
+  		var results = $scope.events[index].fleur ++;
 	};
+	
 	$scope.minusOne = function(index) { 
-  		$scope.events[index].fleurs -- 1; 
+  		var results = $scope.events[index].fleur --;
+  		console.log(results);
 	};
 
 
-	ng-click="plusOne($index)
 
 });
