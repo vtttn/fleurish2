@@ -20,9 +20,9 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	// click function for city filter
 	$scope.filterCitybtn = function(){
 		var selectedCity = $scope.selectedCity;
-		var Events = $scope.events;
+		// var Events = $scope.events;
 		console.log(selectedCity);
-		console.log(Events.find({ city:"New Orleans"}));
+		// console.log(Events.find({ city:"New Orleans"}));
 	};
 
 	$scope.filterTypebtn = function(){
@@ -34,5 +34,10 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 		console.log(selectedAdmission);
 
 	};
+
+	$scope.filterBy = function(x){
+		$scope.filtering = x;
+		console.log(x);
+	}
 
 });
