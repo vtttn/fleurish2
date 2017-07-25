@@ -15,7 +15,7 @@
 					<!-- start event type dropdown -->
 						<div class="col-xs-12 col-md-12 col-lg-12">
 							<div class="input-group filterSearch">
-							<select class="form-control" ng-model="typeSelect" ng-options="type for type in types">
+							<select class="form-control" ng-model="selectedType" ng-options="type for type in types">
 								<option value="" disabled selected >Select a type</option>
 							</select>
 					<!-- / event type dropdown -->
@@ -103,7 +103,7 @@
 					<!-- start dropdown -->
 						<div class="col-xs-12 col-md-12 col-lg-12">
 							<div class="input-group filterSearch">
-							<select class="form-control" ng-model="typeSelect" ng-options="admission for admission in admissions">
+							<select class="form-control" ng-model="selectedAdmission" ng-options="admission for admission in admissions">
 								<option value="" disabled selected >Select admission $</option>
 							</select>
 							  <span class="input-group-btn" ng-click="filterAdmissionbtn()">
