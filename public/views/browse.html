@@ -12,7 +12,18 @@
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					<div class="panel-body">
-						insert filtering for types
+					<!-- start dropdown -->
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<div class="input-group filterSearch">
+							<select class="form-control" ng-model="typeSelect" ng-options="type for type in types">
+								<option value="" disabled selected >Select a type</option>
+							</select>
+							  <span class="input-group-btn" ng-click="filterTypebtn()">
+							  		<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  </span>
+							</div>
+						</div>
+							<!-- /dropdown button -->
 					</div>
 				</div>
 			</div>
@@ -100,7 +111,18 @@
 				</div>
 				<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 					<div class="panel-body">
-						filter by free or other values
+					<!-- start dropdown -->
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<div class="input-group filterSearch">
+							<select class="form-control" ng-model="typeSelect" ng-options="admission for admission in admissions">
+								<option value="" disabled selected >Select an admission price</option>
+							</select>
+							  <span class="input-group-btn" ng-click="filterAdmissionbtn()">
+							  		<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  </span>
+							</div>
+						</div>
+							<!-- /dropdown button -->
 					</div>
 				</div>
 			</div>
