@@ -40,7 +40,6 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	
 	$scope.minusOne = function(index) { 
   		var results = $scope.events[index].fleur --;
-  		console.log(results);
 	};
 
 

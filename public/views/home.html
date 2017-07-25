@@ -34,7 +34,7 @@
 			<!-- search Location -->
 				<div class="col-lg-3 col-md-6">
 					<div class="input-group filterSearch">
-					  <select class="form-control">
+					  <select class="form-control" ng-model="selectedCity" ng-options="city for city in locations">
 					  	<option placeholder="Location"></option>
 						  <option>New Orleans</option>
 						  <option>Metairie</option>
@@ -49,7 +49,7 @@
 						  <option>Marrero</option>
 						</select>
 					  <span class="input-group-btn">
-							<button class="btn btn-default filterbtn" type="button">Go!</button>
+							<button class="btn btn-default filterbtn" type="button" ng-click="filterCitybtn()">Go!</button>
 					  </span>
 					</div>
 				 </div>
