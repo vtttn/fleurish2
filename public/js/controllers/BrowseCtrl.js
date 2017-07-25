@@ -11,7 +11,6 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	// dropdown of event type
 	$scope.types = ["Art" , "Cause" , "Crafts" , "Dance" , "Drink" , "Film" , "Fitness" , "Food" , "Game" , "Health" , "Home" , "Literature" , "Music" , "Networking" , "Other" , "Party" , "Recreation" , "Religion" , "Shopping" , "Theater" , "Wellness"];
 
-
 	// dropdown of cities to select/filter
 	$scope.locations = ["New Orleans" , "Metairie" , "Gretna" , "Kenner" , "Avondale" , "Belle Chasse" , "Chalmette" , "Elmwood" , "Harahan" , "Harvey" , "Marrero"];
 
@@ -20,15 +19,20 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 
 	// click function for city filter
 	$scope.filterCitybtn = function(){
-		console.log($scope.selectedCity);
-
+		var selectedCity = $scope.selectedCity;
+		var Events = $scope.events;
+		console.log(selectedCity);
+		console.log(Events.find({ city:"New Orleans"}));
 	};
 
 	$scope.filterTypebtn = function(){
 		console.log($scope.selectedType);
 	};
+
 	$scope.filterAdmissionbtn = function(){
-		console.log($scope.selectedAdmission);
+		var selectedAdmission = $scope.selectedAdmission;
+		console.log(selectedAdmission);
+
 	};
 
 });
