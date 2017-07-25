@@ -12,7 +12,20 @@
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					<div class="panel-body">
-						insert filtering for types
+					<!-- start event type dropdown -->
+					<div class="col-xs-12 col-md-12 col-lg-12">
+							<div class="input-group filterSearch">
+							<select class="form-control" ng-model="typeSelect" ng-options="type for type in types">
+								<option value="" disabled selected >Select a type</option>
+							</select>
+					<!-- / event type dropdown -->
+					<!-- start button -->
+							  <span class="input-group-btn" ng-click="filterTypebtn()">
+							  		<button class="btn btn-default filterbtn" type="button">Go!</button>
+							  </span>
+					<!-- end -->
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -27,27 +40,14 @@
 				</div>
 				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 					<div class="panel-body">
-					<!-- start dropdown -->
+					<!-- start city dropdown -->
 						<div class="col-xs-12 col-md-12 col-lg-12">
 							<div class="input-group filterSearch">
-							<select class="form-control" ng-model="citySelect" ng-options="city for city in locations">
+							<select class="form-control" ng-model="selectedCity" ng-options="city for city in locations">
 								<option value="" disabled selected >Select a City</option>
 							</select>
-
-							  <!-- <select class="form-control">
-							  	<option value="" selected disabled>Select a City</option>
-								  <option value="New Orleans">New Orleans</option>
-								  <option value="Metairie">Metairie</option>
-								  <option value="Gretna">Gretna</option>
-								  <option value="Kenner">Kenner</option>
-								  <option value="Avondale">Avondale</option>
-								  <option value="Belle Chasse">Belle Chasse</option>
-								  <option value="Chalmette">Chalmette</option>
-								  <option value="Elmwood">Elmwood</option>
-								  <option value="Harahan">Harahan</option>
-								  <option value="Harvey">Harvey</option>
-								  <option value="Marrero">Marrero</option>
-								</select> -->
+					<!-- / city dropdown -->
+					<!-- dropdown button -->
 							  <span class="input-group-btn" ng-click="filterCitybtn()">
 									<button class="btn btn-default filterbtn" type="button">Go!</button>
 							  </span>
@@ -114,6 +114,7 @@
 			<h1>Events</h1>
 
 			<div ng-repeat="event in events">
+			<!-- ng-if="selectedCity" see how to make ng-if true when button is clicked-->
 				
 
 				<div class='panel panel-default'>
