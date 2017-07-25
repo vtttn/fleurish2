@@ -32,7 +32,17 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	$scope.filterAdmissionbtn = function(){
 		var selectedAdmission = $scope.selectedAdmission;
 		console.log(selectedAdmission);
-
 	};
+
+
+	$scope.plusOne = function(index) { 
+  		$scope.events[index].fleurs ++ 1; 
+	};
+	$scope.minusOne = function(index) { 
+  		$scope.events[index].fleurs -- 1; 
+	};
+
+
+	ng-click="plusOne($index)
 
 });
