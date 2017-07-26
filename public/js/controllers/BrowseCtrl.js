@@ -38,18 +38,36 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 
 	// plus & minus of fleur click function + add & change to DB
 	$scope.plusOne = function(index) { 
-  		var results = $scope.events[index].fleur ++;
-
-  		$http.post(URL+"/edit-event").then(function(response){
-			// var donkey = $scope.events = response.data;
-			console.log(response);
+  	var results = $scope.events[index].fleur ++;
+		
+		$http.post(URL+"/edit-event", index).then(function(response){
+			response.data
 		});
+
 	};
 	
 	$scope.minusOne = function(index) { 
   		var results = $scope.events[index].fleur --;
+  		console.log(results);
 	};
 
+
+	// click function to delete
+	// $scope.deleteEvent = function(index){
+
+	// 	console.log(index)
+
+	// 	$http.post(URL+"/delete-event", index).then(function(response){
+
+	// 	})
+	// }
+
+
+	// $http.post(URL+"/edit-event").then(function(response){
+	// 		// var donkey = $scope.events = response.data;
+	// 		// console.log(donkey);
+	// 		console.log(response.data)
+	// 	});
 
 
 });
