@@ -36,9 +36,14 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 		console.log(selectedAdmission);
 	};
 
-	// plus & minus of fleur click function
+	// plus & minus of fleur click function + add & change to DB
 	$scope.plusOne = function(index) { 
   		var results = $scope.events[index].fleur ++;
+
+  		$http.post(URL+"/edit-event").then(function(response){
+			var donkey = $scope.events = response.data;
+			console.log(donkey);
+		});
 	};
 	
 	$scope.minusOne = function(index) { 
