@@ -41,8 +41,8 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
   		var results = $scope.events[index].fleur ++;
 
   		$http.post(URL+"/edit-event").then(function(response){
-			var donkey = $scope.events = response.data;
-			console.log(donkey);
+			// var donkey = $scope.events = response.data;
+			console.log(response);
 		});
 	};
 	
