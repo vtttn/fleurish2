@@ -11,9 +11,11 @@
 			<!-- search Type -->
 				  <div class="col-lg-3 col-md-6">
 						<div class="input-group filterSearch">
-						  <input type="search" class="filterSearchForm form-control" placeholder="Type of Event">
+						  <select class="form-control" ng-model="selectedType" ng-options="type for type in types">
+								<option value="" disabled selected >Select a type</option>
+							</select>
 						  <span class="input-group-btn">
-								<button class="btn btn-default filterbtn" type="button">Go!</button>
+								<button class="btn btn-default filterbtn" type="button" ng-click="indexTypebtn()" >Go!</button>
 						  </span>
 						</div>
 				  </div>
@@ -38,16 +40,18 @@
 					  	<option value="" selected >Select a City</option>
 						</select> 
 					  <span class="input-group-btn">
-							<button class="btn btn-default filterbtn" type="button" ng-click="filterCitybtn()">Go!</button>
+							<button class="btn btn-default filterbtn" type="button" ng-click="indexCitybtn()">Go!</button>
 					  </span>
 					</div>
 				 </div>
 			<!-- search Admission -->
 				<div class="col-lg-2 col-md-6">
 					<div class="input-group filterSearch">
-					  <input type="text" class="filterSearchForm form-control" placeholder="Admission Price">
+					  <select class="form-control" ng-model="selectedAdmission" ng-options="admission for admission in admissions">
+								<option value="" disabled selected>Select Admission</option>
+						</select>
 					  <span class="input-group-btn">
-						<button class="btn btn-default filterbtn" type="button">Go!</button>
+						<button class="btn btn-default filterbtn" type="button" ng-click="indexAdmissionbtn()">Go!</button>
 					  </span>
 					</div>
 				  </div>

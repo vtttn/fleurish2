@@ -25,15 +25,18 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 		// console.log(Events.find({ city:"New Orleans"}));
 	};
 
+	// click function for type filter
 	$scope.filterTypebtn = function(){
 		console.log($scope.selectedType);
 	};
 
+	// click function for admission filter
 	$scope.filterAdmissionbtn = function(){
 		var selectedAdmission = $scope.selectedAdmission;
 		console.log(selectedAdmission);
 	};
 
+	// plus & minus of fleur click function
 	$scope.plusOne = function(index) { 
   		var results = $scope.events[index].fleur ++;
 	};
