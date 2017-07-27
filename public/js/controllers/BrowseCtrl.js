@@ -1,7 +1,7 @@
 angular.module('BrowseCtrl', []).controller('BrowseController', function($scope, $http,) {
 
-	var URL = 'http://localhost:3000';
-	// var URL = 'https://fleurish.herokuapp.com';
+	// var URL = 'http://localhost:3000';
+	var URL = 'https://fleurish.herokuapp.com';
 
 
 	// populates data from DB
