@@ -144,7 +144,7 @@
 						<p> Admission Price: ${{ event.admission }}</p>
 						<p> Fleurs: {{ event.fleur }} 
 
-						<button type="button" class="btn btn-default btn-sm" ng-click="plusOne($index)" >
+						<button type="button" class="btn btn-default btn-sm" ng-click="plusOne($index, event.fleur)" >
 								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 							</button>
 							<button type="button" class="btn btn-default btn-sm" ng-click="minusOne($index)">

@@ -37,12 +37,23 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	};
 
 	// plus & minus of fleur click function + add & change to DB
-	$scope.plusOne = function(index) { 
+	$scope.plusOne = function(index, fleurs, response) { 
   	var results = $scope.events[index].fleur ++;
-		
-		$http.post(URL+"/edit-event", index).then(function(response){
-			response.data
-		});
+  	console.log(index);
+		console.log(fleurs);
+		var tempobj = {'id': index};
+		console.log(tempobj);
+
+
+		$http.post(URL+"/edit-event", tempobj).then(function(err,response){
+			// if(err){
+			// 	console.log("there is an error!")
+			// }else{
+				console.log(response);
+			// }
+
+			console.log(fleurs)
+		})
 
 	};
 	
