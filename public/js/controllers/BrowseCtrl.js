@@ -68,8 +68,9 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 			if(err){
 				console.log("there is an error in the http.post")
 			}else{
-				$http.get(URL+"/all-event").then(function(response){
+				$http.get(URL+"/all-event").then(function(res){
 					// console.log("we're saving!");
+					response.data
 				});
 			}
 		})

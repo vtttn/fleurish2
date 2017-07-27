@@ -10,13 +10,13 @@
 				<div class="row">
 			<!-- search Type -->
 				  <div class="col-lg-3 col-md-6">
-						<div class="input-group filterSearch">
-						  <select class="form-control" ng-model="selectedType" ng-options="type for type in types">
+						<div class="input-group filterSearch formStretch">
+						  <select class="filterSearchForm form-control" ng-model="selectedType" ng-options="type for type in types">
 								<option value="" disabled selected >Select a type</option>
 							</select>
-						  <span class="input-group-btn">
+<!-- 						  <span class="input-group-btn">
 								<button class="btn btn-default filterbtn" type="button" ng-click="indexTypebtn()" >Go!</button>
-						  </span>
+						  </span> -->
 						</div>
 				  </div>
 			<!-- search Date -->
@@ -35,24 +35,24 @@
 				  </div>
 			<!-- search Location -->
 				<div class="col-lg-3 col-md-6">
-					<div class="input-group filterSearch">
-					  <select class="form-control" ng-model="selectedCity" ng-options="city for city in locations">
+					<div class="input-group filterSearch formStretch">
+					  <select class="filterSearchForm form-control" ng-model="selectedCity" ng-options="city for city in locations">
 					  	<option value="" selected >Select a City</option>
 						</select> 
-					  <span class="input-group-btn">
+<!-- 					  <span class="input-group-btn">
 							<button class="btn btn-default filterbtn" type="button" ng-click="indexCitybtn()">Go!</button>
-					  </span>
+					  </span> -->
 					</div>
 				 </div>
 			<!-- search Admission -->
 				<div class="col-lg-2 col-md-6">
-					<div class="input-group filterSearch">
-					  <select class="form-control" ng-model="selectedAdmission" ng-options="admission for admission in admissions">
+					<div class="input-group filterSearch formStretch">
+					  <select class="filterSearchForm form-control" ng-model="selectedAdmission" ng-options="admission for admission in admissions">
 								<option value="" disabled selected>Select Admission</option>
 						</select>
-					  <span class="input-group-btn">
+<!-- 					  <span class="input-group-btn">
 						<button class="btn btn-default filterbtn" type="button" ng-click="indexAdmissionbtn()">Go!</button>
-					  </span>
+					  </span> -->
 					</div>
 				  </div>
 			<!--/ search 4 -->
@@ -65,6 +65,59 @@
 		</div>
 
 <!-- / JUMBOTRON -->
+
+
+<!-- populate events -->
+
+		<div class="container">
+
+			<h1>Events</h1>
+
+			<div ng-repeat="event in events | filter: {city: selectedCity} | filter:{ type: selectedType } | filter:{ admission: selectedAdmission }" class="col-lg-4 col-md-6 col-sm-12">
+			<!-- ng-if="selectedCity" see how to make ng-if true when button is clicked-->
+				
+			<!-- start panel -->
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h2 class='eventList panel-title'>{{ event.title }}</h2>
+					</div>
+
+					<div class='panel-body'>
+						<p> {{ event.description }} </p>
+						<p> {{ event.street }}
+						<br> {{ event.city + ", " + event.state + " " + event.zip }}</p>
+						<p> {{ event.startDate + " - " + event.endDate }}</p>
+						<p> {{ event.startTime + " to " + event.endTime }}</p>
+						<p> Age Restriction: {{ event.ageRestriction }}</p>
+						<p> {{ event.website }}</p>
+						<p> Admission Price: ${{ event.admission }}</p>
+						<p> Fleurs: {{ event.fleur }} 
+
+						<button type="button" class="btn btn-default btn-sm" ng-click="plusOne($index, event._id)" >
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" ng-click="minusOne($index, event._id)">
+								<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+							</button>
+						</p>
+					</div> 
+					<!-- / panel body-->
+
+					<div class='panel-footer'>
+						<p><span ng-repeat="type in event.type" class='label label-default'> {{ type }} </span></p>
+					</div>
+
+				</div>
+			<!-- /end panel -->
+
+			</div>
+			<!-- /ng-repeat div -->
+
+		</div> 
+		<!-- /container -->
+
+
+
 
 
 <!-- custom page script -->

@@ -1,7 +1,8 @@
-// var URL = 'http://localhost:3000';
-var URL = 'https://fleurish.herokuapp.com';
-
 angular.module('MainCtrl', []).controller('MainController', function($scope, $http) {
+
+	var URL = 'http://localhost:3000';
+// var URL = 'https://fleurish.herokuapp.com';
+
 
 	// dropdown of event type
 	$scope.types = ["Art" , "Cause" , "Crafts" , "Dance" , "Drink" , "Film" , "Fitness" , "Food" , "Game" , "Health" , "Home" , "Literature" , "Music" , "Networking" , "Other" , "Party" , "Recreation" , "Religion" , "Shopping" , "Theater" , "Wellness"];
@@ -30,5 +31,10 @@ angular.module('MainCtrl', []).controller('MainController', function($scope, $ht
 		var selectedAdmission = $scope.selectedAdmission;
 		console.log(selectedAdmission);
 	};
+
+
+	$http.get(URL+"/all-event").then(function(response){
+		$scope.events = response.data;
+	});
 
 });
