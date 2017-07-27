@@ -1,7 +1,8 @@
-// var URL = 'http://localhost:8080';
-var URL = 'https://fleurish.herokuapp.com';
+angular.module('BrowseCtrl', []).controller('BrowseController', function($scope, $http,) {
 
-angular.module('BrowseCtrl', []).controller('BrowseController', function($scope, $http) {
+	var URL = 'http://localhost:3000';
+	// var URL = 'https://fleurish.herokuapp.com';
+
 
 	// populates data from DB
 	$http.get(URL+"/all-event").then(function(response){
@@ -37,29 +38,42 @@ angular.module('BrowseCtrl', []).controller('BrowseController', function($scope,
 	};
 
 	// plus & minus of fleur click function + add & change to DB
-	$scope.plusOne = function(index, fleurs, response) { 
-  	var results = $scope.events[index].fleur ++;
-  	console.log(index);
-		console.log(fleurs);
-		var tempobj = {'id': index};
-		console.log(tempobj);
+	$scope.plusOne = function(index, id, res) { 
+		var results = $scope.events[index].fleur ++;
+		var tempobj = {_id: id};
+		// console.log(tempobj);
+		// var tempRes = {fleur: results};
+		// console.log(tempRes);
 
-
-		$http.post(URL+"/edit-event", tempobj).then(function(err,response){
-			// if(err){
-			// 	console.log("there is an error!")
-			// }else{
-				console.log(response);
-			// }
-
-			console.log(fleurs)
+		$http.post(URL+"/plus-fleur", tempobj).then(function(err, resp){
+			if(err){
+				console.log("there is an error in the http.post")
+			}else{
+				$http.get(URL+"/all-event").then(function(response){
+					// console.log("we're saving!");
+				});
+			}
 		})
 
 	};
-	
-	$scope.minusOne = function(index) { 
+
+	$scope.minusOne = function(index, id, res) { 
   		var results = $scope.events[index].fleur --;
-  		console.log(results);
+		var tempobj = {_id: id};
+		// console.log(tempobj);
+		// var tempRes = {fleur: results};
+		// console.log(tempRes);
+
+		$http.post(URL+"/minus-fleur", tempobj).then(function(err, resp){
+			if(err){
+				console.log("there is an error in the http.post")
+			}else{
+				$http.get(URL+"/all-event").then(function(response){
+					// console.log("we're saving!");
+				});
+			}
+		})
+
 	};
 
 
